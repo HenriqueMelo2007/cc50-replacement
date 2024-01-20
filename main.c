@@ -53,7 +53,11 @@ void upperCaseKeyTransform(const char *key, char *upperCaseKey) {
 void cipherTransformation(char text[], int sizeOfText, char upperCaseKey[]) {
 
   for (int i = 0; i < sizeOfText; i++) {
-    char valueChar = (int) text[i];
+    int valueChar = (int) text[i];
+    int letter = valueChar - 65;
+    int valueKey = (int) upperCaseKey[letter];
+
+    printf("%c", valueKey);
   }
 
 }
