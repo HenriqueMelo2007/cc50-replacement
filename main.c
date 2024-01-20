@@ -55,7 +55,7 @@ void cipherTransformation(char text[], int sizeOfText, char upperCaseKey[]) {
   for (int i = 0; i < sizeOfText; i++) {
     int valueChar = (int) text[i];
     int letter = valueChar - 65;
-    int valueKey = (int) upperCaseKey[letter];
+    char valueKey = upperCaseKey[letter];
 
     printf("%c", valueKey);
   }
