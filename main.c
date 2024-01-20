@@ -59,7 +59,7 @@ void cipherTransformation(char text[], int sizeOfText, char upperCaseKey[]) {
 
     if ( valueChar > 90 ) {
       letter = valueChar - 97;
-      valueKey = upperCaseKey[letter];
+      valueKey = upperCaseKey[letter] + 32;
     } else {
       letter = valueChar - 65;
       valueKey = upperCaseKey[letter];
