@@ -4,7 +4,7 @@
 #include <string.h>
 
 void upperCaseKeyTransform(const char *key, char *upperCaseKey);
-void cipherTransformation(char text[]);
+void cipherTransformation(char text[], int sizeOfText);
 
 int main(int argc, char const *argv[]) {
   setlocale(LC_ALL, "Portuguese_Brazil");
@@ -28,8 +28,10 @@ int main(int argc, char const *argv[]) {
   printf("Texto simples: ");
   fgets(text, sizeof(text), stdin);
 
+  int sizeOfText = strlen(text) - 1;
+
   printf("Texto cifrado: ");
-  cipherTransformation(text);
+  cipherTransformation(text, sizeOfText);
 
   return 0;
 }
@@ -48,4 +50,4 @@ void upperCaseKeyTransform(const char *key, char *upperCaseKey) {
   upperCaseKey[26] = '\0';
 }
 
-void cipherTransformation(char text[]) {}
+void cipherTransformation(char text[], int sizeOfText) {}
