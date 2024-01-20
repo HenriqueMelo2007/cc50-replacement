@@ -28,6 +28,9 @@ int main(int argc, char const *argv[]) {
   printf("Texto simples: ");
   fgets(text, sizeof(text), stdin);
 
+  printf("Texto cifrado: ");
+  cipherTransformation(text);
+
   return 0;
 }
 
