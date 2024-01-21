@@ -57,15 +57,18 @@ void cipherTransformation(char text[], int sizeOfText, char upperCaseKey[]) {
     int letter;
     char valueKey;
 
-    if ( valueChar > 90 ) {
+    if ( valueChar >= 97 && valueChar <= 122 ) {
       letter = valueChar - 97;
       valueKey = upperCaseKey[letter] + 32;
-    } else {
+      printf("%c", valueKey);
+    } else if ( valueChar >= 65 && valueChar <= 90 ) {
       letter = valueChar - 65;
       valueKey = upperCaseKey[letter];
+      printf("%c", valueKey);
+    } else {
+      printf("%c", valueChar);
     }
-
-    printf("%c", valueKey);
+   
   }
 
 }
