@@ -5,3 +5,11 @@ In a substitution cipher, we “encrypt” (that is, reversibly hide) a message 
 A key, for example, could be the sequence NQXPOMAFTRHLZGECYJIUWSKDVB. This 26-character key means that A (the first letter of the alphabet) must be converted to N (the first character of the key), B (the second letter of the alphabet) must be converted to Q (the second character of the key), and so on.
 
 A message like HELLO would then be encrypted as FOLLE, replacing each of the letters according to the mapping determined by the key.
+
+Here is an example of how the program might work. For example, if the user enters a key of YTNSHKVEFXRBAUQZCLWDMIPGJO and a plain text of HELLO:
+
+`$ ./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO`
+
+`plain text: HELLO`
+
+`ciphertext: EHBBQ`
