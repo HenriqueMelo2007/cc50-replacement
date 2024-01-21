@@ -20,6 +20,14 @@ int main(int argc, char const *argv[]) {
     return 1;
   }
 
+  for (int i = 0; i < 26; i++) {
+    int charKey = (int) argv[1][i];
+    if ( ( charKey <= 64 || charKey >= 123 ) || ( charKey >= 91 && charKey <= 96  ) ) {
+      printf("Defina através da interface de linha de comando uma única chave para a cifra que contenha as 26 letras do alfabeto!");
+      return 1;
+    }
+  }
+
   char upperCaseKey[26];
   upperCaseKeyTransform(argv[1], upperCaseKey);
   
